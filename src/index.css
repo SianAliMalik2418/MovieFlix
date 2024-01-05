@@ -1,0 +1,168 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Poppins:wght@400;500;600;700;800;900&display=swap');
+ * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+font-family: 'Poppins', sans-serif;
+
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+
+/* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: none;
+    scrollbar-color: #7e7272 #04152d;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #04152d;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #7e7272;
+    border-radius: 10px;
+    border: 3px solid #ffffff;
+  }
+
+  .castDiv{
+    scrollbar-width: none;
+    
+  }
+
+.heroSectionBigText{
+  text-shadow: 0px 5px 10px rgba(0,0,0,1);
+
+}
+
+.cardImage{
+  object-fit: cover;
+  object-position: center;
+}
+
+.radio-button {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin: 10px;
+  position: relative;
+  align-items: center;
+  color: white;
+}
+
+.radio-button input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+}
+
+.radio {
+  position: relative;
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  transform: translateZ(-25px);
+  transition: all 0.3s ease-in-out;
+}
+
+.radio::before {
+  position: absolute;
+  content: '';
+  width: 10px;
+  height: 10px;
+  top: 5px;
+  left: 5px;
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.radio-button input[type="radio"]:checked + .radio {
+  border-color: #5cb85c;
+  transform: translateZ(0px);
+  background-color: #fff;
+}
+
+.radio-button input[type="radio"]:checked + .radio::before {
+  opacity: 1;
+}
+
+.svg {
+  width: 3.25em;
+  transform-origin: center;
+  animation: rotate4 2s linear infinite;
+ }
+ 
+ .circle {
+  fill: none;
+  stroke: hsl(214, 97%, 59%);
+  stroke-width: 2;
+  stroke-dasharray: 1, 200;
+  stroke-dashoffset: 0;
+  stroke-linecap: round;
+  animation: dash4 1.5s ease-in-out infinite;
+ }
+
+ .circleRating {
+  background-color: var(--black);
+  border-radius: 50%;
+  padding: 2px;
+ }
+  .CircularProgressbar-text
+   {
+      font-weight: 700;
+      fill: var(--black);
+  }
+  .CircularProgressbar-trail
+   {
+      stroke: transparent;
+  }
+
+  
+
+  
+
+ 
+ @keyframes rotate4 {
+  100% {
+   transform: rotate(360deg);
+  }
+ }
+ 
+ @keyframes dash4 {
+  0% {
+   stroke-dasharray: 1, 200;
+   stroke-dashoffset: 0;
+  }
+ 
+  50% {
+   stroke-dasharray: 90, 200;
+   stroke-dashoffset: -35px;
+  }
+ 
+  100% {
+   stroke-dashoffset: -125px;
+  }
+ }
+ 
+
+
