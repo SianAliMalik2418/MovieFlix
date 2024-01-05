@@ -6,6 +6,7 @@ import AllTvShows from './components/AllTvShows'
 import AllMovies from './components/AllMovies'
 import Details from './components/Details'
 import SearchPage from './components/SearchPage'
+import Footer from './components/footer'
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path='/:media_type/:id' element = {<Details/>}/>
 
       </Routes>
+      <Footer/>
     </Router>
   )
 }

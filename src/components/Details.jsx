@@ -14,7 +14,6 @@ import TopCast from './TopCast';
 import VideoPopup from '../components/VideoPopup';
 import Similar from './Similar';
 import Recommendations from './Recommendations';
-import Footer from './footer'
 
 
 
@@ -172,7 +171,6 @@ function Details() {
             <TopCast />
             <Similar />
             <Recommendations />
-            <Footer/>
           </>
         )
       }

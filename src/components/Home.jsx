@@ -14,7 +14,6 @@ function Home() {
     <div className='pb-20 '>
    <HeroSection/>
    <CardsContainer/>
-   <Footer/>
     </div>
   )
 }
