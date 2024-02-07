@@ -78,15 +78,22 @@ function Details() {
 
   const { backdrop_path, vote_average, number_of_seasons, number_of_episodes, original_title, tagline, poster_path, overview, status, release_date, runtime, name } = movieDetailsData
 
+  const convertRuntimeToHoursAndMinutes = (totalMinutes) => {
+    const hours = Math.floor(totalMinutes / 60);
+    const minutes = totalMinutes % 60;
+    return `${hours}h ${minutes}m`;
+  };
+
+
   useEffect(function () {
     if (media_type === "tv") {
       setHandleRunTime(number_of_seasons + " Season and " + number_of_episodes + " Episodes");
     }
 
     else {
-      setHandleRunTime(runtime)
+      setHandleRunTime(convertRuntimeToHoursAndMinutes(runtime));
     }
-  }, [MovieDetailsUrl])
+  }, [runtime, number_of_seasons, number_of_episodes])
 
   return (
     <div className='w-screen relative   '>
@@ -98,7 +105,7 @@ function Details() {
           <>
             {
               playerOpen ? (
-                <div className='z-40 absolute flex justify-center items-center backdrop-blur-sm w-screen h-screen transition-all' onClick={()=>setPlayerOpen(false)}>
+                <div className='z-40 absolute flex justify-center items-center backdrop-blur-sm w-screen h-screen transition-all' onClick={() => setPlayerOpen(false)}>
                   <VideoPopup videoId={videoId} playerOpen={playerOpen} setPlayerOpen={(value) => setPlayerOpen(value)} setVideoId={setVideoId} />
                 </div>
 

@@ -3,7 +3,7 @@ import SocialMediaIcons from './SocialMediaIcons'
 function Footer() {
   return (
     <div className='bg-[#020C1B] flex flex-col justify-center items-center w-full  p-5 pb-15 mt-20 gap-5'>
-  <div className='text-white flex gap-10 text-lg sm:text-sm' >
+  <div className='text-white flex gap-10 flex-wrap justify-center text-lg sm:text-sm' >
    <p>Terms Of Use</p>
    <p>Privacy Policy</p>
    <p>About</p>

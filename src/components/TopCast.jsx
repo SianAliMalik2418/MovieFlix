@@ -35,8 +35,8 @@ function TopCast() {
 
 
     return (
-        <div className='   max-w-[1200px] m-auto  pb-10 pl-3 '>
-            <h1 className='text-[white] text-2xl mt-32 mb-2 smd:mt-5 '>Top cast</h1>
+        <div className='   max-w-[1200px] m-auto  pb-10 pl-3  xsm:pt-5'>
+            <h1 className='text-[white] text-2xl mt-32 mb-2 smd:mt-15 '>Top cast</h1>
             <div className=' h-[20rem] px-5 py-2 flex overflow-x-scroll castDiv overflow-y-hidden scrollbar-hidden items-center gap-5'  style={{ scrollbarWidth: 'none'}}>
 
                 {

@@ -21,8 +21,9 @@ html, body {
 /* ===== Scrollbar CSS ===== */
   /* Firefox */
   * {
-    scrollbar-width: none;
+    scrollbar-width: 2px;
     scrollbar-color: #7e7272 #04152d;
+    border-radius: 10px;
   }
 
   /* Chrome, Edge, and Safari */
